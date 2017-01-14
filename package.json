@@ -1,0 +1,10 @@
+{
+  "name": "SocketChat",
+  "version": "0.0.1",
+  "description": "A simple node.js chat built with socket.io",
+  "private": "true",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.14.0"
+  }
+}
