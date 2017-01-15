@@ -14,8 +14,14 @@
     </form>
 </body>
 <script src="/socket.io/socket.io.js"></script>
-<script type="text/javascript">
-    var sock=io();
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script>
+    var socket = io();
+    $('form').submit(function(){
+        socket.emit('chat message', $('#m').val());
+        $('#m').val('');
+        return false;
+    });
 </script>
 
 </html>

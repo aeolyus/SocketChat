@@ -8,6 +8,9 @@ app.get('/',function(req,res){
 io.on('connection',function(sock){
     online++;
     console.log('A user has connected from '+sock.request.connection.remoteAddress+'; users online '+online);
+    sock.on('chat message', function(msg){
+        console.log('message: ' + msg);
+    });
     sock.on('disconnect',function(){
         online--;
         console.log('A user disconnected; users online '+online);
